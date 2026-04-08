@@ -337,3 +337,7 @@ SELECT DISTINCT ?dominio ?rango WHERE {
     
 }
 ```
+
+> [!WARNING]
+> Las consultas de arriba solo funcionarán para las Object Properties, las Datatype Properties no tienen explicitamente definido el rango, por lo que lo mejor será comentar ese Triple Pattern.
+
