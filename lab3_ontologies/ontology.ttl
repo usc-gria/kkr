@@ -1,0 +1,1002 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dbpedia.org/property/hasPhotoCollection> a rdf:Property .
+
+<http://purl.org/dc/terms/title> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf rdfs:label .
+
+rdfs:SeeAlso a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Writer> .
+
+owl:sameAs a rdf:Property .
+
+<http://xmlns.com/foaf/0.1/based_near> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> .
+
+<http://xmlns.com/foaf/0.1/made> a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Director> ) ] ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/Film> .
+
+<http://xmlns.com/foaf/0.1/page> a rdf:Property .
+
+<https://triplydb.com/Triply/linkedmdb/id/oddlinker/link_source> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/id/oddlinker/interlink> .
+
+<https://triplydb.com/Triply/linkedmdb/id/oddlinker/link_target> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/id/oddlinker/interlink> .
+
+<https://triplydb.com/Triply/linkedmdb/id/oddlinker/link_type> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/id/oddlinker/interlink> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/id/oddlinker/linkage_date> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/id/oddlinker/linkage_run> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/id/oddlinker/linkage_method> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/id/oddlinker/linkage_run> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/id/oddlinker/linkage_score> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/id/oddlinker/interlink> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/actor> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Actor> ) ] .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/actor_actorid> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Actor> ) ] ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/actor_name> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Actor> ) ] ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/cinematographer> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Cinematographer> ) ] .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/cinematographer_cinematographerid> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Cinematographer> ) ] ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/cinematographer_name> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Cinematographer> ) ] ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/content_rating_content_ratingid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ContentRating> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/content_rating_country> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ContentRating> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/content_rating_film_rating_system> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ContentRating> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/content_rating_minimum_unaccompanied_age> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ContentRating> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/content_rating_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ContentRating> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/content_rating_system> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ContentRating> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/ContentRatingSystem> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/content_rating_system_content_rating_systemid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ContentRatingSystem> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/content_rating_system_jurisdiction> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ContentRatingSystem> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/content_rating_system_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ContentRatingSystem> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/costume_designer> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Agent> <https://triplydb.com/Triply/linkedmdb/vocab/CostumeDesigner> ) ] .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/Country> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_areaInSqKm> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:double .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_capital> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_continent> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_currency> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_fips_code> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_iso_alpha2> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_iso_alpha3> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_iso_numeric> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_languages> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/country_population> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Country> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/crew_gig_film> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewGig> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/crewmember> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewGig> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/director> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Director> ) ] .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/director_directorid> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Director> ) ] ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/director_name> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Director> ) ] ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/dubbing_performance> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/DubbingPerformance> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/dubbing_performance_actor> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/DubbingPerformance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/dubbing_performance_character> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/DubbingPerformance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/dubbing_performance_dubbing_performanceid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/DubbingPerformance> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/dubbing_performance_film> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/DubbingPerformance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/dubbing_performance_language> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/DubbingPerformance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/editor> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Editor> ) ] .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/editor_editorid> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Editor> ) ] ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/editor_name> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/Editor> ) ] ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/executive_producer> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/Producer> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/featured_film_location> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmLocation> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_art_director> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/ArtDirector> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_art_director_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ArtDirector> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_art_director_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ArtDirector> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_awards_ceremony_film_awards_ceremonyid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmAwardsCeremony> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_awards_ceremony_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmAwardsCeremony> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_awards_ceremony_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmAwardsCeremony> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_casting_director> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/CastingDirector> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_casting_director_film_casting_director_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/CastingDirector> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_casting_director_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/CastingDirector> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_casting_director_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/CastingDirector> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_character> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Performance> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmCharacter> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_character_film_characterid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCharacter> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_character_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCharacter> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_collection> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmCollection> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_collection_film_collectionid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCollection> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_collection_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCollection> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_company> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCompanyRelationship> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://triplydb.com/Triply/linkedmdb/vocab/FilmCompany> <http://xmlns.com/foaf/0.1/Agent> ) ] .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_company_film_companyid> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://triplydb.com/Triply/linkedmdb/vocab/FilmCompany> <http://xmlns.com/foaf/0.1/Agent> ) ] ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_company_name> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://triplydb.com/Triply/linkedmdb/vocab/FilmCompany> <http://xmlns.com/foaf/0.1/Agent> ) ] ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_costume_designer_film_costume_designerid> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Agent> <https://triplydb.com/Triply/linkedmdb/vocab/CostumeDesigner> ) ] ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_costume_designer_name> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Agent> <https://triplydb.com/Triply/linkedmdb/vocab/CostumeDesigner> ) ] ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_crew_gig_film> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewGig> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/Film> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_crew_gig_film_crew_gigid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewGig> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_crew_gig_film_job> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewGig> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmJob> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_crew_gig_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewGig> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_crew_role> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewGig> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_crewmember> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewGig> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewMember> ) ] .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_crewmember_film_crewmemberid> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewMember> ) ] ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_crewmember_name> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://xmlns.com/foaf/0.1/Person> <https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewMember> ) ] ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_critic_film_criticid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCritic> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_critic_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCritic> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_cut> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmCut> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_cut_film_cutid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCut> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_cut_note> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCut> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_distribution_medium> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributionMedium> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_distribution_medium_film_distribution_mediumid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributionMedium> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_distribution_medium_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributionMedium> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_distributor> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributor> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_distributor_film_distributorid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributor> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_distributor_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributor> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_distributor_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributor> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_featured_song> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmFeaturedSong> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_featured_song_film_featured_song_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFeaturedSong> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_featured_song_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFeaturedSong> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_featured_song_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFeaturedSong> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_featured_song_performed_by> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFeaturedSong> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_event> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestival> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalEvent> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_event_closing_date> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalEvent> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_event_film_festival_event_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalEvent> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_event_freebase_url> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalEvent> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_event_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalEvent> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_event_opening_date> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalEvent> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_film_festivalid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestival> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_focus_film_festival_focus_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalFocus> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_focus_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalFocus> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_focus_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalFocus> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestival> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_sponsor_film_festival_sponsor_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalSponsor> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_sponsor_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalSponsor> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_festival_sponsor_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalSponsor> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_company_relationship> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmCompanyRelationship> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_company_relationship_film_film_company_relationshipid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCompanyRelationship> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_company_relationship_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCompanyRelationship> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_company_relationship_role_service> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCompanyRelationship> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_distributor_relationship_distributor> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_distributor_relationship_film_cut> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_distributor_relationship_film_distribution_medium> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_distributor_relationship_film_film_distributor_relationshipid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_distributor_relationship_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_distributor_relationship_region> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_film_distributor_relationship_year> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_format> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmFormat> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_format_film_formatid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFormat> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_format_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmFormat> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_genre_film_genreid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmGenre> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_genre_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmGenre> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_job_film_jobid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmJob> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_job_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmJob> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_location_film_locationid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmLocation> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_location_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmLocation> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_of_distributor> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/Film> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_production_designer> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmProductionDesigner> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_production_designer_film_production_designer_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmProductionDesigner> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_production_designer_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmProductionDesigner> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_production_designer_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmProductionDesigner> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_regional_release_date> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmRegionalReleaseDate> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_regional_release_date_film_regional_debut_venue> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmRegionalReleaseDate> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_regional_release_date_film_regional_release_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmRegionalReleaseDate> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_regional_release_date_film_release_distribution_medium> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmRegionalReleaseDate> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_regional_release_date_film_release_region> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmRegionalReleaseDate> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_regional_release_date_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmRegionalReleaseDate> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_regional_release_date_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmRegionalReleaseDate> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_regional_release_date_release_date> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmRegionalReleaseDate> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_release_region> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCut> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_screening_venue_film_screening_venue_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmScreeningVenue> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_screening_venue_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmScreeningVenue> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_screening_venue_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmScreeningVenue> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_series> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmSeries> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_series_film_seriesid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmSeries> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_series_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmSeries> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_set_designer> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmSetDesigner> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_set_designer_film_set_designer_id> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmSetDesigner> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_set_designer_freebase_url> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmSetDesigner> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_set_designer_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmSetDesigner> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_story_contributor> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmStoryContributor> ;
+    rdfs:subPropertyOf <https://triplydb.com/Triply/linkedmdb/vocab/story_contributor> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_story_contributor_film_story_contributorid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmStoryContributor> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_story_contributor_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmStoryContributor> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_subject_film_subjectid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmSubject> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_subject_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmSubject> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_theorist_film_theoristid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmTheorist> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_theorist_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmTheorist> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/filmid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/genre> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmGenre> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/language> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/linkid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/id/oddlinker/interlink> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/location> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmLocation> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/minor_film_genre_minor_film_genreid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/MinorFilmGenre> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/minor_film_genre_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/MinorFilmGenre> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/music_contributor> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/MusicContributor> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/music_contributor_music_contributorid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/MusicContributor> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/music_contributor_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/MusicContributor> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/performance> a owl:ObjectProperty ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/Performance> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/performance_actor> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Performance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/performance_character> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Performance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/performance_film> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Performance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/performance_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Performance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/performance_note> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Performance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/performance_part> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Performance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/performance_performanceid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Performance> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/performance_special_performance_type> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Performance> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/personal_film_appearance> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearance> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/personal_film_appearance_film> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/personal_film_appearance_person> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/personal_film_appearance_personal_film_appearanceid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearance> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/personal_film_appearance_type> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearance> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearanceType> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/personal_film_appearance_type_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearanceType> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/personal_film_appearance_type_of_appearance> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearance> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/personal_film_appearance_type_personal_film_appearance_typeid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearanceType> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/prequel> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/Film> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/producer> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/Producer> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/producer_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Producer> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/producer_producerid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Producer> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/production_company> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/ProductionCompany> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/production_company_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ProductionCompany> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/production_company_production_companyid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/ProductionCompany> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/rating> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/ContentRating> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/relatedBook> a rdf:Property ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/runtime> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://triplydb.com/Triply/linkedmdb/vocab/Film> <https://triplydb.com/Triply/linkedmdb/vocab/FilmCut> ) ] ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/sequel> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/Film> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/special_film_performance_type_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/SpecialFilmPerformanceType> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/special_film_performance_type_special_film_performance_typeid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/SpecialFilmPerformanceType> ;
+    rdfs:range xsd:int .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/type_of_film_cut> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/FilmCut> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/writer> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/Writer> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/writer_name> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Writer> ;
+    rdfs:range xsd:string .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/writer_writerid> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Writer> ;
+    rdfs:range xsd:int .
+
+<http://purl.org/dc/terms/date> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf <https://triplydb.com/Triply/linkedmdb/vocab/initial_release_date> .
+
+rdfs:label a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+<http://www.w3.org/2004/02/skos/core#subject> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmSubject> ;
+    rdfs:subPropertyOf <https://triplydb.com/Triply/linkedmdb/vocab/film_subject> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/film_subject> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmSubject> ;
+    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#subject> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/initial_release_date> a owl:DatatypeProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf <http://purl.org/dc/terms/date> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/story_contributor> a owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/vocab/Film> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/vocab/FilmStoryContributor> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmCritic> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmTheorist> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/MinorFilmGenre> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/SpecialFilmPerformanceType> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/id/oddlinker/linkage_run> a owl:Class,
+        owl:ObjectProperty ;
+    rdfs:domain <https://triplydb.com/Triply/linkedmdb/id/oddlinker/interlink> ;
+    rdfs:range <https://triplydb.com/Triply/linkedmdb/id/oddlinker/linkage_run> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/Actor> a owl:Class ;
+    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/ArtDirector> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/Cinematographer> a owl:Class ;
+    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/CostumeDesigner> a owl:Class ;
+    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/Editor> a owl:Class ;
+    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmAwardsCeremony> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmCharacter> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmCollection> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmCompany> a owl:Class ;
+    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewMember> a owl:Class ;
+    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributionMedium> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmFestival> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalFocus> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalSponsor> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmFormat> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmGenre> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmJob> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmScreeningVenue> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmSeries> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/MusicContributor> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearanceType> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/ProductionCompany> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/CastingDirector> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/ContentRatingSystem> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/Director> a owl:Class ;
+    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributor> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmLocation> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmProductionDesigner> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmSetDesigner> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmStoryContributor> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmSubject> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/Producer> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/Writer> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmCompanyRelationship> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmCut> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmFeaturedSong> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/id/oddlinker/interlink> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/DubbingPerformance> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmFestivalEvent> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/PersonalFilmAppearance> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/ContentRating> a owl:Class .
+
+<http://xmlns.com/foaf/0.1/Agent> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmCrewGig> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmRegionalReleaseDate> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/FilmDistributorRelationship> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/Performance> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/Country> a owl:Class .
+
+<http://xmlns.com/foaf/0.1/Person> a owl:Class .
+
+<https://triplydb.com/Triply/linkedmdb/vocab/Film> a owl:Class .
+
